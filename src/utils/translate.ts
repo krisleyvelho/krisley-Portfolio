@@ -1,3 +1,7 @@
+import EN_SVG from "../assets/enUS.svg";
+import PT_SVG from "../assets/pt.svg";
+import ES_SVG from "../assets/es.svg";
+
 export const Languages = {
   EN: "EN",
   PT: "PT",
@@ -5,13 +9,15 @@ export const Languages = {
 } as const;
 
 export type Languages = typeof Languages[keyof typeof Languages];
-export type SentencesType = Record<Languages, Record<string, string>>;
 
 export type SentenceKeys = keyof typeof englishSentences;
 export type MappedWordsType = Record<SentenceKeys, string>;
+export type SentencesType = Record<Languages, MappedWordsType>;
 
 
 const spanishSentences = {
+  "helloMyNameIs": "Hola, mi nombre es Krisley",
+  "mySubscription": "Desarrollador Front-end enfocado en React y experiencias intuitivas.",
   'home': "Inicio",
   'about': "Sobre",
   'aboutMe': "Sobre mi",
@@ -33,6 +39,8 @@ const spanishSentences = {
 }
 
 const portugueseSentences = {
+  "helloMyNameIs": "Olá, meu nome é Krisley",
+  "mySubscription": "Desenvolvedor Front-end focado em React e experiências intuitivas.",
   'home': "Inicio",
   'about': "Sobre",
   'aboutMe': "Sobre mim",
@@ -54,6 +62,8 @@ const portugueseSentences = {
 }
 
 const englishSentences = {
+  "helloMyNameIs": "Hello, my name is Krisley",
+  "mySubscription": "Front-end developer focused on React and intuitive experiences.",
   'home': "Home",
   'about': "About",
   'aboutMe': "About Me",
@@ -78,4 +88,10 @@ export const sentences: SentencesType = {
   "EN": englishSentences,
   "PT": portugueseSentences,
   "ES": spanishSentences,
+}
+
+export const FLAG_BY_LANGUAGE: Record<Languages, string> = {
+  "EN": EN_SVG,
+  "PT": PT_SVG,
+  "ES": ES_SVG,
 }
