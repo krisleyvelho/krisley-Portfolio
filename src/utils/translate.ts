@@ -1,6 +1,6 @@
-import EN_SVG from "../assets/enUS.svg";
-import PT_SVG from "../assets/pt.svg";
-import ES_SVG from "../assets/es.svg";
+import EN_SVG from "../assets/enUS.svg?url";
+import PT_SVG from "../assets/pt.svg?url";
+import ES_SVG from "../assets/es.svg?url";
 
 export const Languages = {
   EN: "EN",
