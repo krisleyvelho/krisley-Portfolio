@@ -1,6 +1,6 @@
 import { useI18nStore } from "@/utils/i18n-state";
 import { SectionTitle } from "./ui/section-title";
-import { Github, Linkedin, MessageCircleMore } from "lucide-react";
+// import { Github, Linkedin, MessageCircleMore } from "lucide-react";
 
 const SOCIALS = [
   {
@@ -18,28 +18,18 @@ const SOCIALS = [
     url: "https://api.whatsapp.com/send?phone=5548996985323?text=Olá%20Krisley%20%F0%9F%98%8D",
     icon: "whatsapp",
   }
-  /* {
-    name: "Twitter",
-    url: "https://twitter.com/krisleyvelho",
-    icon: "twitter",
-  },
-  {
-    name: "Instagram",
-    url: "https://www.instagram.com/krisleyvelho/",
-    icon: "instagram",
-  }, */
 ];
 
-const icons = {
+/* const icons = {
   github: Github,
   linkedin: Linkedin,
   whatsapp: MessageCircleMore,
-}
+} */
 
 export function ContactMe() {
   const { currentDictionary } = useI18nStore();
   return (
-    <div className="bg-white rounded-lg shadow" id="#contact">
+    <div className="bg-white rounded-lg shadow" id="contact">
       <SectionTitle title={currentDictionary['contact']} />
       <div className="divide-y">
         {SOCIALS.map((social) => (

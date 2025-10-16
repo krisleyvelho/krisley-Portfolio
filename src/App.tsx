@@ -1,24 +1,24 @@
 import { useRef } from "react";
+import Me from "./assets/me.jpeg";
+import { AboutMe } from "./components/about-me";
 import { AnimatedText } from "./components/animated-text";
+import { ContactMe } from "./components/contact-me";
 import { Experiences } from "./components/experiences";
+import { FlagList } from "./components/flag-list";
 import { Footer } from "./components/footer";
 import { NavBar, NavLinks } from "./components/navBar";
 import { Typewriter } from "./components/ui/typewriter";
 import { useScrollDirection } from "./lib/useScrollDirection";
 import { cn } from "./lib/utils";
 import { useI18nStore } from "./utils/i18n-state";
-import Me from "./assets/me.jpeg";
-import { AboutMe } from "./components/about-me";
-import { ContactMe } from "./components/contact-me";
 
 function App() {
-  const ref = useRef(null);
+  const ref = useRef<HTMLElement | null>(null);
   const { currentDictionary } = useI18nStore();
   const navBarVisible = useScrollDirection(ref, { threshold: 10 });
 
   return (
     <div className="h-screen flex flex-col bg-gray-50 overflow-hidden" >
-      {/* {!atTop && <NavBar />} */}
       <main className="flex-1 overflow-y-auto" ref={ref}>
         <section className={cn("bg-slate-400 items-center justify-center flex shadow p-6 flex-col transition-all h-full gap-4",)}>
           <img
@@ -29,17 +29,17 @@ function App() {
             className="size-80 rounded-full object-cover animate-apearItem"
           />
 
-          <AnimatedText text={"Olá, meu nome é Krisley"} />
+          <AnimatedText text={currentDictionary['helloMyNameIs']} />
           <AnimatedText text={currentDictionary['welcome']} />
-          <Typewriter text="Desenvolvedor Front-end focado em React e experiências intuitivas."
+          <Typewriter text={currentDictionary['mySubscription']}
             delay={1000}
             className="max-w-2/3 text-center"
           />
           <NavLinks className="flex justify-between gap-4 py-4 animate-apearItem" />
+          <FlagList />
 
         </section>
         <NavBar visible={navBarVisible} />
-
         <Experiences />
         <AboutMe />
         <ContactMe />

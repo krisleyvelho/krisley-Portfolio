@@ -3,7 +3,7 @@ import { Badge } from "./ui/badge";
 import ExperienceCounter from "./experience-time-display";
 import { Link } from "react-router";
 import { Link as LinkIcon } from "lucide-react";
-import { formatMonthYear } from "@/utils/date-formater";
+import { formatMonthYear, getTimeIntervalText } from "@/utils/date-formater";
 import { Card } from "./ui/card_initial";
 import { Timeline } from "./timeline";
 import { SectionTitle } from "./ui/section-title";
@@ -30,6 +30,18 @@ type TecnologiesType =
   | "QLIKSENSE"
   | "GITHUB"
   | "REACTNATIVE";
+
+export interface ExperienceCardType {
+    title: string;
+    description: string;
+    startDate: Date
+    endDate?: Date;
+    companyName: string;
+    modality: "inPerson" | "hybrid" | "remote";
+    technologies: TecnologiesType[];
+    companyUrl?: string;
+    // link: string;
+  }
 
 const experiences: ExperienceCardType[] = [
   {
@@ -102,18 +114,6 @@ export function Experiences() {
   )
 }
 
-export interface ExperienceCardType {
-  title: string;
-  description: string;
-  startDate: Date
-  endDate?: Date;
-  companyName: string;
-  modality: "inPerson" | "hybrid" | "remote";
-  technologies: TecnologiesType[];
-  companyUrl?: string;
-  // link: string;
-}
-
 export function ExperienceCard(props: ExperienceCardType) {
   const { currentDictionary, currentLocale } = useI18nStore();
 
@@ -128,7 +128,10 @@ export function ExperienceCard(props: ExperienceCardType) {
       <div className="flex flex-col ">
         <div className="flex justify-between items-center flex-wrap">
           <h3 className="text-lg font-semibold">{props.title}</h3>
+          <div className="flex flex-col">
           <span className="text-sm font-bold text-muted-foreground max-w-1/3">{`${dateStart} - ${dateEnd}`}</span>
+          <small>{getTimeIntervalText(props.startDate, isCurrentJob ? new Date() : props.endDate!, currentLocale)}</small>
+          </div>
         </div>
         <CompanyNameComponent />
         <small className="text-muted-foreground">{currentDictionary['modality']} - {currentDictionary[props.modality]}</small> 

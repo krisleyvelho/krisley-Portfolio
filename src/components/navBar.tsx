@@ -37,7 +37,7 @@ import { cn } from "@/lib/utils";
         className={cn(
           "sticky top-0 z-50 w-full border-b bg-white shadow-sm",
           "transition-transform duration-300 ease-in-out",
-          visible ? "translate-y-0" : "-translate-y-full opacity-0 delay-100 hidden"
+          visible ? "translate-y-0 absolute" : "-translate-y-full opacity-0 delay-100 hidden"
         )}
       >
         <div className="flex h-16 items-center px-6">

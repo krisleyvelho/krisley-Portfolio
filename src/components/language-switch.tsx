@@ -1,12 +1,13 @@
 import { useI18nStore } from "@/utils/i18n-state";
-import { Languages } from "@/utils/translate";
+import { FLAG_BY_LANGUAGE, Languages } from "@/utils/translate";
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "./ui/select";
+import { FlagRender } from "./ui/flag-render";
 
 export function LanguageSwitch() {
   const { setLanguage, language, currentDictionary } = useI18nStore()
 
   return (
-    <Select defaultValue={language} onValueChange={(value) => setLanguage(value as Languages)}>
+    <Select onValueChange={(value) => setLanguage(value as Languages)} value={language}>
       <SelectTrigger className="w-fit">
         <SelectValue placeholder="Select a fruit" />
       </SelectTrigger>
@@ -16,7 +17,7 @@ export function LanguageSwitch() {
           {Object.keys(Languages).map((key) => {
             const typedKey = key as unknown as keyof typeof Languages
             return (
-              <SelectItem key={key} value={key}>{Languages[typedKey]}</SelectItem>
+              <SelectItem key={key} value={key}><FlagRender flag={FLAG_BY_LANGUAGE[typedKey]} alt={typedKey} /> {Languages[typedKey]}</SelectItem>
             )
           })}
         </SelectGroup>
