@@ -13,12 +13,8 @@
 
 ## 📸 Screenshots
 
-> **Nota:** Adicione suas screenshots aqui
-
-```markdown
-![Home](./docs/screenshots/home.jpg)
-![Sobre](./docs/screenshots/experiences.jpg)
-```
+![Home](https://raw.githubusercontent.com/krisleyvelho/krisley-Portfolio/main/docs/screenshots/home.jpg)
+![Sobre](https://raw.githubusercontent.com/krisleyvelho/krisley-Portfolio/main/docs/screenshots/experiences.jpg)
 
 ---
 
