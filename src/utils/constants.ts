@@ -1,4 +1,8 @@
 export const ROUTES = {
+  'home': {
+    label: 'home',
+    path: '#home'
+  },
   'about': {
     label: 'about',
     path: '#aboutMe'

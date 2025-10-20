@@ -6,10 +6,11 @@ import { Menu } from "lucide-react";
 import { LanguageSwitch } from "./language-switch";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuPortal, DropdownMenuSub, DropdownMenuSubContent, DropdownMenuSubTrigger, DropdownMenuTrigger } from "./ui/dropdown-menu";
 import { cn } from "@/lib/utils";
+import { ToggleTheme } from "./toggleTheme";
 
 function NavLink({ href, children }: { href: string, children: React.ReactNode }) {
   return (
-    <a href={href} className="text-sm font-medium hover:text-blue-600 transition-colors w-full">
+    <a href={href} className="text-sm font-medium hover:text-blue-600 transition-colors w-full text-wrap break-words">
       {children}
     </a>
   )
@@ -41,7 +42,7 @@ export function NavBar({ visible = true }: { visible?: boolean }) {
         visible ? "translate-y-0 absolute" : "-translate-y-full opacity-0 delay-100 hidden"
       )}
     >
-      <div className="flex h-16 items-center px-6">
+      <div className="flex h-16 items-center justify-between px-6">
         <div className="flex items-center gap-2 font-semibold text-xl">
           <span>Krisley Velho</span>
         </div>
@@ -58,7 +59,12 @@ export function DesktopNavBar() {
         <NavLinks />
       </nav>
       <div className="ml-auto">
-        <LanguageSwitch />
+        <div className="flex gap-4">
+
+          <ToggleTheme />
+
+          <LanguageSwitch />
+        </div>
       </div>
     </>
   )
@@ -67,7 +73,10 @@ export function DesktopNavBar() {
 function MobileNavBar() {
   const { currentDictionary, setLanguage } = useI18nStore()
   return (
-    <div className="ml-auto">
+
+    <div className="flex gap-4">
+
+      <ToggleTheme />
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Menu />
@@ -96,5 +105,7 @@ function MobileNavBar() {
         </DropdownMenuContent>
       </DropdownMenu>
     </div>
+
+
   )
 }

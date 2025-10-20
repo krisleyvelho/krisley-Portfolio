@@ -9,7 +9,7 @@ import { useI18nStore } from "@/utils/i18n-state"
 export function FlagList() {
   const { setLanguage, } = useI18nStore()
   return (
-    <div className="flex justify-center items-center gap-2">
+    <div className="flex justify-center items-center gap-2 flex-wrap">
       {Object.entries(FLAG_BY_LANGUAGE).map(([key, flagUrl]) => {
         const typedKey = key as Languages
         return (

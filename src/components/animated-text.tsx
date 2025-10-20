@@ -1,11 +1,14 @@
+import { cn } from "@/lib/utils";
 
-interface AnimatedTextProps {
+interface AnimatedTextProps extends React.ComponentProps<"span"> {
   text: string;
 }
 
-export function AnimatedText({ text }: AnimatedTextProps) {
+export function AnimatedText({ className, text }: AnimatedTextProps) {
+
+  const spanClassName = cn("text-2xl font-semibold text-center animate-apearItem delay-150", className)
   return (
-    <div className="flex">
+    <div className="flex flex-wrap justify-center overflow-ellipsis">
       {text.split('').map((char, index) => {
         const isSpace = char === ' ';
         if (isSpace) {
@@ -15,7 +18,7 @@ export function AnimatedText({ text }: AnimatedTextProps) {
           )
         }
         return (
-          <span key={index} className="text-2xl font-semibold text-center animate-apearItem delay-150" style={{
+          <span key={index} className={spanClassName} style={{
             animationDelay: `${index * 0.01}s`,
             animationFillMode: 'both'
           }}>{char}</span>

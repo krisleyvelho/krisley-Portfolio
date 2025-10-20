@@ -14,18 +14,20 @@ function App() {
 
   return (
     <div className="h-screen flex flex-col bg-background overflow-hidden" >
-        <ToggleTheme /> 
+      <div className=" right-1/12 absolute top-5 z-50 rounded-full shadow w-fit p-2">
+        <ToggleTheme />
+      </div>
       <main className="flex-1 overflow-y-auto" ref={ref}>
         <Home />
         <NavBar visible={navBarVisible} />
         <div className="flex flex-col px-4 gap-2">
 
-        <AboutMe />
-        <Experiences />
-        <ContactMe />
+          <AboutMe />
+          <Experiences />
+          <ContactMe />
         </div>
 
-      <Footer />
+        <Footer />
       </main>
     </div>
   )

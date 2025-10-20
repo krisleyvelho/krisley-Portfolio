@@ -34,10 +34,11 @@ function MainTecnologies() {
   )
 }
 
-function Paragragh({ text }: { text: string }) {
+function Paragragh({ text, children }: { text: string, children?: React.ReactNode }) {
   return (
     <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
       {text}
+      {children}
     </p>
   )
 }
@@ -64,8 +65,10 @@ export function AboutMe() {
           </p>
 
           <div className="space-y-4">
-            <Paragragh text={currentDictionary['aboutMe2']} />
-            <MainTecnologies />
+            <Paragragh text={currentDictionary['aboutMe2']}>
+
+            <MainTecnologies />.
+            </Paragragh>
             <Paragragh text={currentDictionary['aboutMe2-1']} />
             <Paragragh text={currentDictionary['aboutMe3']} />
             <Paragragh text={currentDictionary['aboutMe4']} />
