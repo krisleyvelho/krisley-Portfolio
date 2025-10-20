@@ -7,7 +7,7 @@
 
 > Portfólio pessoal desenvolvido para apresentar minha trajetória profissional, conhecimentos técnicos e experiências de forma interativa e responsiva.
 
-## 🚀 [Acesse o Portfólio](https://portfolio-wine-kappa-m6bu2v1ozc.vercel.app/)
+## 🚀 [Acesse o Portfólio](https://krisleyvelho-portifolio.vercel.app/)
 
 ---
 
