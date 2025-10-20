@@ -1,12 +1,9 @@
-import { useI18nStore } from "@/utils/i18n-state";
-import { Badge } from "./ui/badge";
-import ExperienceCounter from "./experience-time-display";
-import { Link } from "react-router";
-import { Link as LinkIcon } from "lucide-react";
 import { formatMonthYear, getTimeIntervalText } from "@/utils/date-formater";
-import { Card } from "./ui/card_initial";
-import { Timeline } from "./timeline";
-import { SectionTitle } from "./ui/section-title";
+import { useI18nStore } from "@/utils/i18n-state";
+import { Link as LinkIcon } from "lucide-react";
+import { Link } from "react-router";
+import { Badge } from "./ui/badge";
+import { Card } from "./ui/card";
 
 type TecnologiesType =
   | "HTML5"
@@ -29,89 +26,92 @@ type TecnologiesType =
   | "CYPRESS"
   | "QLIKSENSE"
   | "GITHUB"
+  | "OPENLAYERS"
   | "REACTNATIVE";
 
 export interface ExperienceCardType {
-    title: string;
-    description: string;
-    startDate: Date
-    endDate?: Date;
-    companyName: string;
-    modality: "inPerson" | "hybrid" | "remote";
-    technologies: TecnologiesType[];
-    companyUrl?: string;
-    // link: string;
-  }
-
-const experiences: ExperienceCardType[] = [
-  {
-    title: "Desenvolvedor Web Pleno",
-    description: "Desenvolvimento de aplicações com Angular, Next.js e React. Criação de mapas interativos e soluções de geoprocessamento. Integração de APIs via tRPC e React Query.",
-    startDate: new Date("2023-02-01T00:00:00-03:00"),
-    // endDate: new Date(),
-    companyName: "Topocart – Topografia, Engenharia e Mapeamento Aéreo",
-    companyUrl: "https://www.topocart.com.br/",
-    modality: "remote",
-    technologies: [
-      "ANGULAR",
-      "NEXTJS",
-      "REACT",
-      "TAILWINDCSS",
-      "SHADCN",
-      "RADIXUI",
-      "NUQS",
-      "ZUSTAND",
-      "TRPC",
-      "REACTQUERY",
-      "REACTNATIVE"
-    ],
-  },
-  {
-    title: "Desenvolvedor Web Júnior",
-    description: "Desenvolvimento de sistemas com React e TypeScript. Estilização com Tailwind e integração de pagamentos com API PagSeguro.",
-    startDate: new Date("2022-02-01T00:00:00-03:00"),
-    endDate: new Date("2022-09-01T00:00:00-03:00"),
-    companyName: "Silbeck",
-    companyUrl: "https://www.silbeck.com.br/",
-    modality: "inPerson",
-    technologies: [
-      "REACT",
-      "TYPESCRIPT",
-      "TAILWINDCSS",
-      "PAGSEGUROAPI",
-      "CYPRESS"
-    ],
-  },
-  {
-    title: "Analista e Desenvolvedor de Sistemas Júnior",
-    description: "Desenvolvimento com HTML, CSS, PHP e JavaScript. Manutenção de sistemas MES industriais e construção de painéis de BI com Qlik Sense.",
-    startDate: new Date("2019-10-01T00:00:00-03:00"),
-    endDate: new Date("2021-10-01T00:00:00-03:00"),
-    companyName: "GDM Plásticos (Grupo FCO)",
-    companyUrl: "https://www.gdmplasticos.com.br/",
-    modality: "inPerson",
-    technologies: [
-      "HTML5",
-      "CSS",
-      "PHP",
-      "JAVASCRIPT",
-      "QLIKSENSE",
-      "ORACLESQL",
-      "GITHUB"
-    ],
-  },
-];
+  title: string;
+  description: string;
+  startDate: Date
+  endDate?: Date;
+  companyName: string;
+  modality: "inPerson" | "hybrid" | "remote";
+  technologies: TecnologiesType[];
+  companyUrl?: string;
+  // link: string;
+}
 
 export function Experiences() {
   const { currentDictionary } = useI18nStore();
+
+  const experiences: ExperienceCardType[] = [
+    {
+      title: currentDictionary['topocartTitle'],
+      description: currentDictionary['topocartDescription'],
+      startDate: new Date("2023-02-01T00:00:00-03:00"),
+      // endDate: new Date(),
+      companyName: "Topocart – Topografia, Engenharia e Mapeamento Aéreo",
+      companyUrl: "https://www.topocart.com.br/",
+      modality: "remote",
+      technologies: [
+        "ANGULAR",
+        "NEXTJS",
+        "REACT",
+        "TAILWINDCSS",
+        "SHADCN",
+        "RADIXUI",
+        "NUQS",
+        "ZUSTAND",
+        "TRPC",
+        "REACTQUERY",
+        "REACTNATIVE",
+        "OPENLAYERS"
+      ],
+    },
+    {
+      title: currentDictionary['silbeckTitle'],
+      description: currentDictionary['silbeckDescription'],
+      startDate: new Date("2022-02-01T00:00:00-03:00"),
+      endDate: new Date("2022-09-01T00:00:00-03:00"),
+      companyName: "Silbeck",
+      companyUrl: "https://www.silbeck.com.br/",
+      modality: "inPerson",
+      technologies: [
+        "REACT",
+        "TYPESCRIPT",
+        "TAILWINDCSS",
+        "PAGSEGUROAPI",
+        "CYPRESS"
+      ],
+    },
+    {
+      title: currentDictionary['gdmTitle'],
+      description: currentDictionary['gdmDescription'],
+      startDate: new Date("2019-10-01T00:00:00-03:00"),
+      endDate: new Date("2021-10-01T00:00:00-03:00"),
+      companyName: "GDM Plásticos (Grupo FCO)",
+      companyUrl: "https://www.gdmplasticos.com.br/",
+      modality: "inPerson",
+      technologies: [
+        "HTML5",
+        "CSS",
+        "PHP",
+        "JAVASCRIPT",
+        "QLIKSENSE",
+        "ORACLESQL",
+        "GITHUB"
+      ],
+    },
+  ];
+
   return (
-    <section id="experiences">
-      <SectionTitle title={currentDictionary['experiences']}>
-        <ExperienceCounter startDate={experiences.slice(-1)[0].startDate} />
-      </SectionTitle>
-      <Timeline experiences={experiences} />
-    </section>
+    <Card title={currentDictionary['experiences']} id="experiences" className="flex flex-col gap-4">
+      {experiences.map((experience) => (
+        <ExperienceCard key={experience.title} {...experience} />
+      ))}
+    </Card>
   )
+
 }
 
 export function ExperienceCard(props: ExperienceCardType) {
@@ -129,14 +129,15 @@ export function ExperienceCard(props: ExperienceCardType) {
         <div className="flex justify-between items-center flex-wrap">
           <h3 className="text-lg font-semibold">{props.title}</h3>
           <div className="flex flex-col">
-          <span className="text-sm font-bold text-muted-foreground max-w-1/3">{`${dateStart} - ${dateEnd}`}</span>
-          <small>{getTimeIntervalText(props.startDate, isCurrentJob ? new Date() : props.endDate!, currentLocale)}</small>
+            <span className="text-sm font-bold text-muted-foreground max-w-1/3 text-nowrap">{`${dateStart} - ${dateEnd}`}</span>
+            <small>{getTimeIntervalText(props.startDate, isCurrentJob ? new Date() : props.endDate!, currentLocale)}</small>
           </div>
         </div>
         <CompanyNameComponent />
-        <small className="text-muted-foreground">{currentDictionary['modality']} - {currentDictionary[props.modality]}</small> 
+        <small className="text-muted-foreground">{currentDictionary['modality']} - {currentDictionary[props.modality]}</small>
       </div>
-      <p className="text-gray-600 text-sm">
+      {/* <p className="text-gray-600 text-sm"> */}
+      <p className="text-sm">
         {props.description}
 
       </p>

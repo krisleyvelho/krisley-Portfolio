@@ -1,7 +1,7 @@
 export const ROUTES = {
   'about': {
     label: 'about',
-    path: '#about'
+    path: '#aboutMe'
   },
   'experiences': {
     label: 'experiences',
@@ -13,6 +13,6 @@ export const ROUTES = {
   },
   'contact': {
     label: 'contact',
-    path: '#contact'
+    path: '#contactMe'
   },
 } as const

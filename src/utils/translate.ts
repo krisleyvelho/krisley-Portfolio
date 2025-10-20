@@ -31,6 +31,24 @@ const spanishSentences = {
   'inPerson': "Presencial",
   "modality": "Modalidade",
   "welcome": "Bienvenido a mi Portafolio!",
+  "silbeckTitle": "Junior Web Developer",
+  "silbeckDescription": "Desarrollo de sistemas con React y TypeScript. Estilización con Tailwind y integración de pagos con API PagSeguro.",
+  "topocartTitle": "Mid-level Web Developer",
+  "topocartDescription": "Desarrollo de aplicaciones con Angular, Next.js y React. Creación de mapas interactivos y soluciones de geoprocesamiento. Integración de APIs vía tRPC y React Query.",
+  "gdmTitle": "Analista y desarrollador de sistemas junior",
+  "gdmDescription": "Desarrollo con HTML, CSS, PHP y JavaScript. Mantenimiento de sistemas industriales y dashboards BI con Qlik Sense.",
+  "mainCompetencies": "Competencias principales",
+  "aboutMe1": "Soy desarrollador web full stack con experiencia sólida en el desarrollo de aplicaciones modernas y escalables. Actualmente estoy estudiando la fase 6 de Sistemas de Información en Uniasselvi, acumulando más de 5 años de experiencia práctica en el área de análisis y desarrollo de software.",
+  "aboutMe2": "Mi trayectoria profesional está marcada por un enfoque en el desarrollo front-end, donde especializo en crear interfaces modernas, responsivas y de alta performance utilizando tecnologías como ",
+  "aboutMe2-1": "Tengo experiencia significativa en React Native (Expo) para el desarrollo de aplicaciones móviles, además de trabajar con soluciones de geoprocesamiento y visualización de datos.",
+  "aboutMe3": "A lo largo de mi carrera, he desarrollado desde sistemas internos y dashboards de BI hasta aplicaciones web complejas con mapas interactivos y integración de APIs. Tengo una fuerte actividad con metodologías ágiles, aplicación de buenas prácticas de código y un enfoque constante en UX/UI y rendimiento.",
+  "aboutMe4": "Busco constantemente mejorar mis habilidades técnicas y estar al día con las mejores prácticas del mercado, siempre con el objetivo de entregar soluciones de alto impacto que realmente hacen la diferencia.",
+  'competency1': "Desarrollo de aplicaciones web modernas con Next.js, React y Angular",
+  'competency2': "Creación de interfaces responsivas con Tailwind CSS, ShadCN y Radix UI",
+  'competency3': "Desarrollo móvil con React Native y Expo",
+  'competency4': "Integración de APIs y gestión de estado",
+  'competency5': "Visualización de datos y soluciones de geoprocesamiento",
+  'competency6': "Pruebas automatizadas y buenas prácticas de código"
 }
 
 const portugueseSentences = {
@@ -54,6 +72,24 @@ const portugueseSentences = {
   'inPerson': "Presencial",
   "modality": "Modalidade",
   "welcome": "Bem vindo ao meu Portfólio!",
+  "silbeckTitle": "Desenvolvedor Web Júnior",
+  "silbeckDescription": "Desenvolvimento de sistemas com React e TypeScript. Estilização com Tailwind e integração de pagamentos com API PagSeguro.",
+  "topocartTitle": "Desenvolvedor Web Pleno",
+  "topocartDescription": "Desenvolvimento de aplicações com Angular, Next.js e React. Criação de mapas interativos e soluções de geoprocessamento. Integração de APIs via tRPC e React Query.",
+  "gdmTitle": "Analista e Desenvolvedor de Sistemas Júnior",
+  "gdmDescription": "Desenvolvimento com HTML, CSS, PHP e JavaScript. Manutenção de sistemas MES industriais e construção de painéis de BI com Qlik Sense.",
+  "mainCompetencies": "Principais competências",
+  "aboutMe1": "Sou desenvolvedor web full stack com sólida experiência no desenvolvimento de aplicações modernas e escaláveis. Atualmente cursando a 6ª fase de Sistemas de Informação na Uniasselvi, acumulo mais de 5 anos de experiência prática na área de análise e desenvolvimento de software.",
+  "aboutMe2": "Minha trajetória profissional é marcada pelo foco em desenvolvimento front-end, onde especializo-me em criar interfaces modernas, responsivas e de alta performance utilizando tecnologias como ",
+  "aboutMe2-1": "Tenho experiência significativa com React Native (Expo) para desenvolvimento mobile, além de trabalhar com soluções de geoprocessamento e visualização de dados.",
+  "aboutMe3": "Ao longo da minha carreira, desenvolvi desde sistemas internos e dashboards de BI até aplicações web complexas com mapas interativos e integração de APIs. Tenho forte atuação com metodologias ágeis, aplicação de boas práticas de código e foco constante em UX/UI e performance.",
+  "aboutMe4": "Busco constantemente aprimorar minhas habilidades técnicas e me manter atualizado com as melhores práticas do mercado, sempre com o objetivo de entregar soluções de alto impacto que realmente façam a diferença.",
+  'competency1': "Desenvolvimento de aplicações web modernas com Next.js, React e Angular",
+  'competency2': "Criação de interfaces responsivas com Tailwind CSS, ShadCN e Radix UI",
+  'competency3': "Desenvolvimento mobile com React Native e Expo",
+  'competency4': "Integração de APIs e gerenciamento de estado",
+  'competency5': "Visualização de dados e soluções de geoprocessamento",
+  'competency6': "Testes automatizados e boas práticas de código"
 }
 
 const englishSentences = {
@@ -77,6 +113,24 @@ const englishSentences = {
   'inPerson': "In-Person Work",
   "modality": "Modality",
   "welcome": "Welcome to my Portfolio!",
+  "silbeckTitle": "Junior Web Developer",
+  "silbeckDescription": "Development of systems with React and TypeScript. Styling with Tailwind and integration of payments with API PagSeguro.",
+  "topocartTitle": "Mid-level Web Developer",
+  "topocartDescription": "Development of applications with Angular, Next.js and React. Creation of interactive maps and geoprocessing solutions. Integration of APIs via tRPC and React Query.",
+  "gdmTitle": "Junior Systems Analyst and Developer",
+  "gdmDescription": "Development with HTML, CSS, PHP and JavaScript. Maintenance of industrial systems and BI dashboards with Qlik Sense.",
+  "mainCompetencies": "Main competencies",
+  "aboutMe1": "I am a full stack developer with a solid experience in developing modern and scalable applications. Currently, I am studying the 6th period of Information Systems at Uniasselvi, accumulating more than 5 years of practical experience in the area of software analysis and development.",
+  "aboutMe2": "My professional trajectory is marked by a focus on front-end development, where I specialize in creating intuitive interfaces, responsive and high-performance web applications using technologies such as ",
+  "aboutMe2-1": "I have extensive experience in React Native (Expo) for mobile development, as well as in web development with solutions for geoprocessing and visualization.",
+  "aboutMe3": "Throughout my career, I have developed from systems internal and dashboards of BI to applications of complexity, with a focus on user experience and performance.",
+  "aboutMe4": "I constantly strive to improve my technical skills and stay up-to-date with the best practices in the market, always with the goal of delivering high-impact solutions that truly make a difference.",
+  'competency1': "Development of modern web applications with Next.js, React, and Angular",
+  'competency2': "Creation of responsive interfaces with Tailwind CSS, ShadCN, and Radix UI",
+  'competency3': "Mobile development with React Native and Expo",
+  'competency4': "API integration and state management",
+  'competency5': "Data visualization and geoprocessing solutions",
+  'competency6': "Automated testing and code best practices"
 }
 
 export const FLAG_BY_LANGUAGE: Record<Languages, string> = {
