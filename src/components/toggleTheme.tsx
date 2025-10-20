@@ -1,4 +1,4 @@
-import { useTheme } from "@/utils/useTheme";
+import { useTheme } from "@/hooks/useTheme";
 import { SunMoon } from "lucide-react";
 import { Switch } from "./ui/switch";
 

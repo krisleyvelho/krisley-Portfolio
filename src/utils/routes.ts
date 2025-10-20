@@ -5,7 +5,7 @@ export const ROUTES = {
   },
   'about': {
     label: 'about',
-    path: '#aboutMe'
+    path: '#about'
   },
   'experiences': {
     label: 'experiences',
@@ -17,6 +17,8 @@ export const ROUTES = {
   },
   'contact': {
     label: 'contact',
-    path: '#contactMe'
+    path: '#contact'
   },
 } as const
+
+export type RouteKeysType = keyof typeof ROUTES;

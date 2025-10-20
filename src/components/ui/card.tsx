@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils/cn";
 import { SectionTitle } from "./section-title";
 
 export function Card(_props: React.ComponentProps<"div"> & { title?: string }) {

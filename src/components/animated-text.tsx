@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils/cn";
 
 interface AnimatedTextProps extends React.ComponentProps<"span"> {
   text: string;

@@ -47,7 +47,7 @@ export function ContactMe() {
   const { currentDictionary } = useI18nStore();
 
   return (
-    <Card title={currentDictionary['contact']} id="contactMe">
+    <Card title={currentDictionary['contact']} id="contact">
       <div className="flex gap-4 items-center justify-between flex-col py-4 sm:flex-row sm:justify-center">
         {SOCIALS.map((social) => (
           <div key={social.name} className="flex items-center justify-between w-full sm:w-fit gap-2">

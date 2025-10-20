@@ -1,11 +1,11 @@
-import { useIsMobile } from "@/lib/useIsMobile";
-import { ROUTES } from "@/utils/constants";
+import { useIsMobile } from "@/hooks/useIsMobile";
+import { ROUTES } from "@/utils/routes";
 import { useI18nStore } from "@/utils/i18n-state";
 import { Languages } from "@/utils/translate";
 import { Menu } from "lucide-react";
 import { LanguageSwitch } from "./language-switch";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuPortal, DropdownMenuSub, DropdownMenuSubContent, DropdownMenuSubTrigger, DropdownMenuTrigger } from "./ui/dropdown-menu";
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils/cn";
 import { ToggleTheme } from "./toggleTheme";
 
 function NavLink({ href, children }: { href: string, children: React.ReactNode }) {

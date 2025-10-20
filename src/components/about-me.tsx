@@ -57,7 +57,7 @@ export function AboutMe() {
 
   return (
     <>
-      <Card title={currentDictionary['aboutMe']} id="aboutMe">
+      <Card title={currentDictionary['aboutMe']} id="about">
         <div className="space-y-6 mt-4">
 
           <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300">

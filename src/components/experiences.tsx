@@ -1,33 +1,12 @@
 import { formatMonthYear, getTimeIntervalText } from "@/utils/date-formater";
 import { useI18nStore } from "@/utils/i18n-state";
+import type { TecnologiesType } from "@/utils/types";
 import { Link as LinkIcon } from "lucide-react";
 import { Link } from "react-router";
-import { Badge } from "./ui/badge";
 import { Card } from "./ui/card";
+import { TecnologieBadge } from "./ui/tecnologie-badge";
 
-type TecnologiesType =
-  | "HTML5"
-  | "CSS"
-  | "JAVASCRIPT"
-  | "TYPESCRIPT"
-  | "PHP"
-  | "ORACLESQL"
-  | "NEXTJS"
-  | "REACT"
-  | "ANGULAR"
-  | "TAILWINDCSS"
-  | "SHADCN"
-  | "RADIXUI"
-  | "NUQS"
-  | "ZUSTAND"
-  | "TRPC"
-  | "REACTQUERY"
-  | "PAGSEGUROAPI"
-  | "CYPRESS"
-  | "QLIKSENSE"
-  | "GITHUB"
-  | "OPENLAYERS"
-  | "REACTNATIVE";
+
 
 export interface ExperienceCardType {
   title: string;
@@ -143,7 +122,8 @@ export function ExperienceCard(props: ExperienceCardType) {
       </p>
       <div className="mt-4 pt-4 border-t flex flex-wrap gap-2">
         {props.technologies.map((tech) => (
-          <Badge key={tech} className="rounded-3xl h-fit w-fit bg-muted text-muted-foreground">{tech}</Badge>
+          <TecnologieBadge key={tech}>{tech}</TecnologieBadge>
+
         ))}
       </div>
     </Card>

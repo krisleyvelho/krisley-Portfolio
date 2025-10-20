@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { AboutMe } from "./components/about-me";
 import { ContactMe } from "./components/contact-me";
 import { Experiences } from "./components/experiences";
@@ -6,11 +6,28 @@ import { Footer } from "./components/footer";
 import { Home } from "./components/home";
 import { NavBar } from "./components/navBar";
 import { ToggleTheme } from "./components/toggleTheme";
-import { useScrollDirection } from "./lib/useScrollDirection";
+import { useScrollDirection } from "./hooks/useScrollDirection";
+import { Projects } from "./components/projects";
+import { ROUTES, type RouteKeysType } from "./utils/routes";
 
 function App() {
   const ref = useRef<HTMLElement | null>(null);
   const navBarVisible = useScrollDirection(ref, { threshold: 10 });
+
+  const currentHash = window.location.hash;
+  useEffect(() => {
+    // return to current section on page load or reload
+    if (currentHash) {
+      const currentRoute = ROUTES[currentHash.replace("#", "") as  RouteKeysType];
+      if (currentRoute) {
+        const element = document.getElementById(currentRoute.label);
+        if (element) {
+          element.scrollIntoView();
+        }
+      }
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return (
     <div className="h-screen flex flex-col bg-background overflow-hidden" >
@@ -24,6 +41,7 @@ function App() {
 
           <AboutMe />
           <Experiences />
+          <Projects />
           <ContactMe />
         </div>
 

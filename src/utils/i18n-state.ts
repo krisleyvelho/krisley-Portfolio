@@ -17,7 +17,6 @@ function getLocale(language: Languages): Locale {
 interface I18nState {
   language: Languages;
   setLanguage: (language: Languages) => void;
-  // currentDictionary: SentencesType[Languages];
   currentDictionary: MappedWordsType;
   currentLocale: Locale;
 }
