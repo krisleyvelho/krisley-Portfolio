@@ -2,6 +2,7 @@ import { useI18nStore } from "@/utils/i18n-state";
 import { Copy, Mail } from "lucide-react";
 import { Card } from "./ui/card";
 import { CustomTooltipContent } from "./ui/tooltip";
+import type { ComponentType } from "react";
 
 const SOCIALS = [
   {
@@ -30,17 +31,13 @@ const SOCIALS = [
   }
 
 ];
-
-function SocialIcon({ icon }: { icon: string | any }) {
-  if (typeof icon === 'string') {
-    return (
-      <img src={icon} alt="social icon" className="w-5 h-5" />
-    )
+function SocialIcon({ icon }: { icon: string | ComponentType<{ className?: string }> }) {
+  if (typeof icon === "string") {
+    return <img src={icon} alt="social icon" className="w-5 h-5" />;
   }
+
   const IconComponent = icon;
-  return (
-    <IconComponent className="size-5" />
-  )
+  return <IconComponent className="size-5" />;
 }
 
 export function ContactMe() {

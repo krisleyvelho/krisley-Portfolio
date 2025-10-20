@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 
 const useTypewriter = (text: string, speed = 50, delay = 100) => {
   const [displayText, setDisplayText] = useState("");
-  const intervalRef = useRef<any>(null);
+  const intervalRef = useRef(0);
 
   useEffect(() => {
     setDisplayText("");
