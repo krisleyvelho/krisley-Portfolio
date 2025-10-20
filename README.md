@@ -1,69 +1,144 @@
-# React + TypeScript + Vite
+# 💼 Krisley Velho - Portfólio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![Deploy Status](https://img.shields.io/badge/deploy-active-success)](https://portfolio-wine-kappa-m6bu2v1ozc.vercel.app/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-18.x-61dafb)](https://reactjs.org/)
+[![Vite](https://img.shields.io/badge/Vite-5.x-646cff)](https://vitejs.dev/)
 
-Currently, two official plugins are available:
+> Portfólio pessoal desenvolvido para apresentar minha trajetória profissional, conhecimentos técnicos e experiências de forma interativa e responsiva.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 [Acesse o Portfólio](https://portfolio-wine-kappa-m6bu2v1ozc.vercel.app/)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📸 Screenshots
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+> **Nota:** Adicione suas screenshots aqui
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```markdown
+![Home](./docs/screenshots/home.jpg)
+![Sobre](./docs/screenshots/experiences.jpg)
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🛠️ Tecnologias Utilizadas
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Este projeto foi construído com uma stack moderna focada em performance, acessibilidade e developer experience:
+
+| Tecnologia | Descrição |
+|------------|-----------|
+| **[React.js](https://reactjs.org/)** | Biblioteca JavaScript para construção de interfaces |
+| **[TypeScript](https://www.typescriptlang.org/)** | Superset JavaScript com tipagem estática |
+| **[Vite](https://vitejs.dev/)** | Build tool moderna com HMR ultra-rápido |
+| **[TailwindCSS](https://tailwindcss.com/)** | Framework CSS utility-first para estilização responsiva |
+| **[shadcn/ui](https://ui.shadcn.com/)** | Componentes acessíveis e customizáveis (Radix UI + Tailwind) |
+| **[Lucide React](https://lucide.dev/)** | Biblioteca de ícones moderna e consistente |
+| **[Zustand](https://zustand-demo.pmnd.rs/)** | Gerenciamento de estado global leve e eficiente |
+| **[date-fns](https://date-fns.org/)** | Biblioteca moderna para manipulação de datas |
+| **[pnpm](https://pnpm.io/)** | Gerenciador de pacotes rápido e eficiente |
+
+---
+
+## ✨ Funcionalidades
+
+- ✅ Design responsivo e mobile-first
+- ✅ Internacionalização (i18n) com gerenciamento via Zustand
+- ✅ Acessibilidade (WCAG) através do shadcn/ui
+- ✅ Animações suaves e transições
+- ✅ Performance otimizada com lazy loading
+- ✅ Deploy automático na Vercel
+
+---
+
+## 🚀 Como Executar Localmente
+
+### Pré-requisitos
+
+- [Node.js](https://nodejs.org/) (versão 18 ou superior)
+- [pnpm](https://pnpm.io/) (gerenciador de pacotes)
+
+### Instalação
+
+1. **Clone o repositório**
+```bash
+git clone https://github.com/krisleyvelho/krisley-Portfolio.git
+cd krisley-Portfolio
 ```
+
+2. **Instale as dependências**
+```bash
+pnpm install
+```
+
+3. **Execute o servidor de desenvolvimento**
+```bash
+pnpm dev
+```
+
+4. **Acesse no navegador**
+```
+http://localhost:5173
+```
+
+### Scripts Disponíveis
+
+```bash
+pnpm dev        # Inicia o servidor de desenvolvimento
+pnpm build      # Gera build de produção
+pnpm preview    # Visualiza o build de produção localmente
+pnpm lint       # Executa o ESLint
+```
+
+---
+
+## 📁 Estrutura do Projeto
+
+```
+📦src
+ ┣ 📂assets # Assets
+ ┣ 📂components # Components
+ ┃ ┣ 📂ui # UI Components
+ ┣ 📂hooks # Hooks
+ ┣ 📂utils # Utils and Formatters
+ ┣ 📜App.tsx
+ ┣ 📜index.css
+ ┣ 📜main.tsx
+ ┗ 📜vite-env.d.ts
+```
+
+---
+
+## 🌐 Deploy
+
+O projeto possui deploy automático configurado na **Vercel**:
+
+- **URL de Produção:** [https://portfolio-wine-kappa-m6bu2v1ozc.vercel.app/](https://portfolio-wine-kappa-m6bu2v1ozc.vercel.app/)
+- **Deploy Automático:** Configurado via GitHub + Vercel
+- **Branch Principal:** `main`
+
+Cada push na branch principal dispara um novo deploy automaticamente.
+
+---
+
+## 📝 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+---
+
+## 👤 Autor
+
+**Krisley Velho**
+
+- GitHub: [@krisleyvelho](https://github.com/krisleyvelho)
+- LinkedIn: [krisleyvelho](https://www.linkedin.com/in/krisleyvelho/)
+- Email: [krisleyvelho@gmail.com]
+
+---
+
+## 🤝 Contribuições
+
+Embora este seja um projeto pessoal, sugestões e feedbacks são sempre bem-vindos! Sinta-se à vontade para abrir uma [issue](https://github.com/krisleyvelho/krisley-Portfolio/issues) ou entrar em contato.
+
+---
