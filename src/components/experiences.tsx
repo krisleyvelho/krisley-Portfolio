@@ -28,7 +28,7 @@ export function Experiences() {
       title: currentDictionary['topocartTitle'],
       description: currentDictionary['topocartDescription'],
       startDate: new Date("2023-02-01T00:00:00-03:00"),
-      // endDate: new Date(),
+      endDate: new Date('2025-09-01T00:00:00-03:00'),
       companyName: "Topocart – Topografia, Engenharia e Mapeamento Aéreo",
       companyUrl: "https://www.topocart.com.br/",
       modality: "remote",
