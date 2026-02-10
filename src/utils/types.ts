@@ -20,4 +20,7 @@ export type TecnologiesType =
   | "QLIKSENSE"
   | "GITHUB"
   | "OPENLAYERS"
-  | "REACTNATIVE";
+  | "REACTNATIVE"
+  | "NEXTJS"
+  | "ORVAL"
+  | "JEST";

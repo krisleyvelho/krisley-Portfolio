@@ -33,15 +33,26 @@ export function Projects() {
         "ZUSTAND",
       ]
     },
-    /* {
-      name: "Teste",
-      description: "Teste",
-      repository: "https://github.com/krisleyvelho/test",
+    {
+      name: "FinDash",
+      description: "Aplicação para gerenciamento de finanças. Desenvolvido para enriquecer meu portfólio. Ainda em fase de desenvolvimento conforme minha disponibilidade. Atualmente o projeto conta com um dashboard de dados financeiros e um mapa interativo para demonstração de local de gastos.",
+      repository: "https://github.com/krisleyvelho/financial-dashboard",
       tecnologies: [
         "HTML5",
-        "PHP",
+        "CSS",
+        "JAVASCRIPT",
+        "TYPESCRIPT",
+        "NEXTJS",
+        "TAILWINDCSS",
+        "SHADCN",
+        "ZUSTAND",
+        "ORVAL",
+        "JEST",
+        "CYPRESS",
+        "OPENLAYERS"
       ]
-    } */
+    }
+   
   ];
 
   const flatListTecnologies = [
